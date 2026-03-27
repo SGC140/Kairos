@@ -1,11 +1,9 @@
 import pandas as pd
 import os
-from dotenv import load_dotenv
-load_dotenv()
 
 
-input_data = os.getenv("DATA_PATH")
-datos_raw = pd.read_csv(input_data)
+
+datos_raw = pd.read_csv("Dec-31-2025_Mar-22-2026_932527802818110.csv")
 datos = pd.DataFrame(datos_raw)
 headers = datos.columns
 

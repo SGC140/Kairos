@@ -172,6 +172,25 @@ with st.container(border=True):
     c_scat1.plotly_chart(fig1, use_container_width=True)
     c_scat2.plotly_chart(fig2, use_container_width=True)
 
+with st.container(border=True):
+    st.markdown("### ⏳ Longevidad: Alcance vs Tiempo de Publicación")
+    
+    fig_time = px.scatter(
+        df, 
+        x="Días activo", 
+        y="Alcance", 
+        size="Visualizaciones", 
+        color="Alcance",
+        color_continuous_scale="Plasma", 
+        hover_name="Desc_Hover", 
+        trendline="ols",
+        hover_data={"Desc_Hover": False, "Visualizaciones": True, "Alcance": True},
+        template="plotly_dark"
+    )
+    
+    fig_time.update_layout(height=450, margin=dict(l=0, r=0, t=30, b=0))
+    st.plotly_chart(fig_time, use_container_width=True)
+
 # 4. Heatmap por publicación (Barras horizontales)
 with st.container(border=True):
     st.markdown("### Rendimiento detallado por Publicación")

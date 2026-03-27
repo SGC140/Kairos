@@ -3,7 +3,7 @@ import os
 
 
 
-datos_raw = pd.read_csv("Jan-01-2026_Mar-26-2026_1888590108521750.csv")
+datos_raw = pd.read_csv("Mar-26-2025_Mar-26-2026_949104527769166.csv")
 datos = pd.DataFrame(datos_raw)
 headers = datos.columns
 
@@ -27,9 +27,9 @@ analyitics_kairos['Seguimientos'] = analyitics_kairos['Seguimientos'].fillna(0)
 analyitics_kairos['Descripción'] = (analyitics_kairos['Descripción'].str.split('\n').str[0])
 
 
-print(analyitics_kairos.head())
+print(analyitics_kairos)
 
-df = analyitics_kairos.to_csv("Insight Kairós.csv")
+analyitics_kairos.to_csv("Insight Kairós.csv")
 
 
 

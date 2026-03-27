@@ -144,7 +144,8 @@ with st.container(border=True):
 
     fig_evol.update_layout(
         template="plotly_dark", height=450,
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
+        # Cambiamos xanchor a "left" y x a 0 para alinearla a la izquierda
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0),
         margin=dict(l=0, r=0, t=30, b=0)
     )
     st.plotly_chart(fig_evol, use_container_width=True)

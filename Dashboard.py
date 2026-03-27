@@ -278,7 +278,6 @@ if "Hora" in df.columns and "Veces que se compartió" in df.columns and "Veces q
         
         st.plotly_chart(fig_hora, use_container_width=True)
 
-# 7. Dataframe Final
 with st.container(border=True):
     st.markdown("### Base de datos interactiva (Heatmap)")
     df_mostrar = df.drop(columns=["Desc_Hover", "Desc_Eje", "Fecha_dt"]).copy()
@@ -286,7 +285,6 @@ with st.container(border=True):
     columnas_metricas = ["Visualizaciones", "Alcance", "Me gusta", "Comentarios"]
     cols_existentes = [c for c in columnas_metricas if c in df_mostrar.columns]
     
-    # Se usa PuRd para una gradiente que va de un tono claro hasta morado-rosado oscuro
     df_styled = df_mostrar.style.background_gradient(
         cmap='PuRd', subset=cols_existentes
     ).format(precision=0, subset=cols_existentes)

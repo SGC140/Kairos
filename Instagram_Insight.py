@@ -29,7 +29,7 @@ analyitics_kairos['Descripción'] = (analyitics_kairos['Descripción'].str.split
 
 print(analyitics_kairos)
 
-analyitics_kairos.to_csv("Insight Kairós.csv")
+analyitics_kairos.to_csv("insight_kairos.csv")
 
 
 

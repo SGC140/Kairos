@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import textwrap
 
-PATH = "Insight Kairós.csv"
+PATH = "insight_kairos.csv"
 
 st.set_page_config(page_title="Dashboard Kairós", layout="wide")
 
